@@ -1,0 +1,74 @@
+using System;
+using System.Collections.Generic;
+
+namespace Exercici_Restaurant
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const int billet5 = 5;
+            const int billet10 = 10;
+            const int billet20 = 20;
+            const int billet50 = 50;
+            const int billet100 = 100;
+            const int billet200 = 200;
+            const int billet500 = 500;
+            double preutotal;
+            string[] plato = new string[10];
+            int[] preuplat = new int[10];
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(plato[i]);
+                plato[0] = "\n1- Macarrones";
+                plato[1] = "\n2- Canelones";
+                plato[2] = "\n3- Champiñones";
+                plato[3] = "\n4- Gambas";
+                plato[4] = "\n5- Arroz";
+                plato[5] = "\n6- Pollo";
+                plato[6] = "\n7- Ternera";
+                plato[7] = "\n8- Jamon";
+                plato[8] = "\n9- Lentejas";
+                plato[9] = "\n10- Spaghettis";
+                Console.WriteLine("Precio plato " + preuplat[i]);
+                preuplat[0] = 8;
+                preuplat[1] = 7;
+                preuplat[2] = 5;
+                preuplat[3] = 9;
+                preuplat[4] = 6;
+                preuplat[5] = 7;
+                preuplat[6] = 9;
+                preuplat[7] = 6;
+                preuplat[8] = 7;
+                preuplat[9] = 8;
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Que dessitja menjar?");
+            int pedido = Convert.ToInt32(Console.ReadLine());
+
+            while (pedido == 1)
+            {
+
+                Console.WriteLine(pedido);
+                List<string> listapedido = new List<string>();
+
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Desea algo mas?");
+            Program algomas = new Program();
+            if (algomas == 0)
+            { Console.WriteLine("Que desea?");}
+            else { if (algomas==1)
+                {
+                    Console.WriteLine("Ahora le traemos su pedido");
+                }
+            }
+
+
+
+            Console.ReadKey();
+        }
+
+}
+}
