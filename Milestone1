@@ -1,0 +1,105 @@
+using System;
+using System.Collections.Generic;
+
+namespace Milestone1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const int b5 = 5, b10 = 10, b20 = 20, b50 = 50, b100 = 100, b200 = 200, b500 = 500;
+            string[] plat = new string[10];
+            int[] preuplat = new int[10];
+            int preutotal;
+
+            Console.WriteLine("Este es nuestro menu: ");
+
+            for (int i = 0; i < 10; i++)
+            {
+                plat[0] = "\n1- Macarrones";
+                plat[1] = "\n2- Canelones";
+                plat[2] = "\n3- Champiñones";
+                plat[3] = "\n4- Gambas";
+                plat[4] = "\n5- Arroz";
+                plat[5] = "\n6- Pollo";
+                plat[6] = "\n7- Ternera";
+                plat[7] = "\n8- Jamon";
+                plat[8] = "\n9- Lentejas";
+                plat[9] = "\n10- Spaghettis";
+                Console.WriteLine(plat[i]);
+
+                preuplat[0] = 8;
+                preuplat[1] = 7;
+                preuplat[2] = 5;
+                preuplat[3] = 9;
+                preuplat[4] = 6;
+                preuplat[5] = 7;
+                preuplat[6] = 9;
+                preuplat[7] = 6;
+                preuplat[8] = 7;
+                preuplat[9] = 8;
+                Console.WriteLine("Precio: " + preuplat[i] + "eur");
+            }
+
+            Console.WriteLine("");
+
+            List<int> listapedido = new List<int>();
+            int pedido;
+
+            do
+            {
+                Console.WriteLine("Que plato desea?");
+                pedido = Convert.ToInt32(Console.ReadLine());
+                listapedido.Add(pedido);
+
+                Console.WriteLine("");
+                Console.WriteLine("Plato pedido nº" + pedido);
+                if (pedido > 10)
+                {
+                    Console.WriteLine("Plato erroneo");
+                    break;
+                }
+            } while (pedido > 10);
+
+            Console.WriteLine("");
+            Console.WriteLine("Desea algo mas? \n1 Si\n2 No");
+            int pedido2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("");
+            if (pedido2 == 1)
+                do
+                {
+                    Console.WriteLine("Que plato desea?");
+                    pedido2 = Convert.ToInt32(Console.ReadLine());
+                    listapedido.Add(pedido2);
+
+                    Console.WriteLine("");
+                    Console.WriteLine("Plato pedido nº" + pedido2);
+                    if (pedido2 > 10)
+                    {
+                        Console.WriteLine("Plato erroneo");
+                        break;
+                    }
+                    Console.WriteLine("");
+                    Console.WriteLine("Enseguida le traemos sus platos nº " + pedido + " y nº " + pedido2);
+                } while (pedido2 > 10);
+
+            if (pedido2 == 2)
+            { Console.WriteLine("Enseguida le traemos su plato nº" + pedido); }
+            Console.WriteLine("");
+            for (int i = 0; i < plat.Length; i++)
+            {
+                Console.WriteLine("La cuenta: ");
+                break;
+            }
+
+            preutotal = pedido + pedido2;
+
+            Console.WriteLine("El precio total es de: " + preutotal);
+
+
+
+            Console.ReadKey();
+        }
+
+        }
+    }
